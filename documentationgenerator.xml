@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>documentationgenerator</name>
+    </assembly>
+    <members>
+        <member name="T:documentationgenerator.Entries.MemberEntry">
+            <summary>
+            Represents a member entry.
+            </summary>
+            <typeinfo>public class</typeinfo>
+        </member>
+        <member name="M:documentationgenerator.Entries.MemberEntry.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:documentationgenerator.Entries.MemberEntry"/> class.
+            </summary>
+            <param name="element">The XElement containing the member entry.</param>
+            <typeinfo>public</typeinfo>
+        </member>
+        <member name="P:documentationgenerator.Entries.MemberEntry.raw">
+            <summary>
+            Gets the raw name attribute value from the XElement.
+            </summary>
+            <remarks>
+            This property retrieves the "name" attribute value from the XElement. Returns <c>string.Empty</c> if the attribute is not present.
+            </remarks>
+            <typeinfo>public string</typeinfo>
+        </member>
+        <member name="P:documentationgenerator.Entries.MemberEntry.name">
+            <summary>
+            Gets the processed name of the member, excluding the type prefix.
+            </summary>
+            <remarks>
+            This property extracts the member name from <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/>, excluding the initial type prefix if present. Returns <c>string.Empty</c> if <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/> is null.
+            </remarks>
+            <typeinfo>public string</typeinfo>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:documentationgenerator.Entries.MemberEntry.summary" -->
+        <!-- Badly formed XML comment ignored for member "P:documentationgenerator.Entries.MemberEntry.remarks" -->
+        <member name="P:documentationgenerator.Entries.MemberEntry.typeinfo">
+            <summary>
+            Gets additional type information for the member.
+            </summary>
+            <remarks>
+            This property retrieves the content of the "typeinfo" child element under the current XElement. Returns <c>string.Empty</c> if the element is not found.
+            </remarks>
+            <typeinfo>public string</typeinfo>
+        </member>
+        <member name="P:documentationgenerator.Entries.MemberEntry.returns">
+            <summary>
+            Gets the return value description for the member.
+            </summary>
+            <remarks>
+            This property retrieves the content of the "returns" child element under the current XElement. Returns <c>string.Empty</c> if the element is not found.
+            </remarks>
+            <typeinfo>public string</typeinfo>
+        </member>
+        <member name="P:documentationgenerator.Entries.MemberEntry.type">
+            <summary>
+            Gets the type identifier character from <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/>.
+            </summary>
+            <remarks>
+            This property extracts the first character from <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/>. Returns null if <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/> is null or empty.
+            </remarks>
+            <typeinfo>public char?</typeinfo>
+        </member>
+        <member name="M:documentationgenerator.Entries.MemberEntry.GetParameterTypes">
+            <summary>
+            Retrieves parameter types from the 'name' property of the current instance.
+            Assumes the 'name' follows a method signature format. Returns an enumerable
+            of parameter types extracted from the method signature.
+            </summary>
+            <returns>An enumerable of strings representing parameter types.</returns>
+            <typeinfo>public IEnumerable&lt;string></typeinfo>
+        </member>
+        <member name="P:documentationgenerator.Entries.MemberEntry.parameters">
+            <summary>
+            Retrieves child elements named "param" and constructs <see cref="T:documentationgenerator.Entries.MemberParam"/> objects based on them.
+            Each <see cref="T:documentationgenerator.Entries.MemberParam"/> object consists of a name, value, and parameter type obtained from
+            the corresponding position in the method signature extracted by GetParameterTypes().
+            </summary>
+            <remarks>
+            Uses GetParameterTypes() to determine the parameter types for each <see cref="T:documentationgenerator.Entries.MemberParam"/> object.
+            </remarks>
+            <returns>An enumerable of <see cref="T:documentationgenerator.Entries.MemberParam"/> objects.</returns>
+            <typeinfo>public IEnumerable&lt;MemberParam></typeinfo>
+        </member>
+        <member name="M:documentationgenerator.Entries.MemberEntry.GetMemberType">
+            <summary>
+            Determines the type of the member based on its identifier character.
+            </summary>
+            <remarks>
+            This method identifies the type of the member based on the first character of <see cref="P:documentationgenerator.Entries.MemberEntry.raw"/>.
+            </remarks>
+            <returns>The type of the member as a <see cref="T:documentationgenerator.MemberType"/> enum value.</returns>
+            <typeinfo>public MemberType</typeinfo>
+        </member>
+        <member name="M:documentationgenerator.Entries.MemberEntry.Validate">
+            <summary>
+            Validates the member entry. It does this by checking whether the element is null or not, and it makes sure it has an valid member type.
+            </summary>
+            <returns>True if the member entry is valid; otherwise, false.</returns>
+            <typeinfo>public bool</typeinfo>
+        </member>
+        <member name="M:documentationgenerator.Entries.RootEntry.Validate(System.String,System.String@)">
+            <summary>
+            s
+            </summary>
+            <param name="name"></param>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
