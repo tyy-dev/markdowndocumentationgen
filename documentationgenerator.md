@@ -95,16 +95,4 @@ The type of the member as a  enum value.
 Validates the member entry. It does this by checking whether the element is null or not, and it makes sure it has an valid member type.
 #### Returns
 True if the member entry is valid; otherwise, false.
-
----
-<a name='M:documentationgenerator.Entries.RootEntry.Validate(System.String,System.String@)'></a>
-### documentationgenerator.Entries.RootEntry.Validate(System.String,System.String@) `Method`
-#### Summary
-s
-#### Parameters
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| name | System.String | 
-| arg | System.String@ | 
-
 ---
