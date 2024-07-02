@@ -102,13 +102,5 @@
             <returns>True if the member entry is valid; otherwise, false.</returns>
             <typeinfo>public bool</typeinfo>
         </member>
-        <member name="M:documentationgenerator.Entries.RootEntry.Validate(System.String,System.String@)">
-            <summary>
-            s
-            </summary>
-            <param name="name"></param>
-            <param name="arg"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>
